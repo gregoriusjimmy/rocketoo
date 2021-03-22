@@ -9,18 +9,25 @@ public class Movement : MonoBehaviour
    [SerializeField] AudioClip mainEngine;
    [SerializeField] float rotationThurst = 100;
    [SerializeField] ParticleSystem mainEngineParticles;
-   [SerializeField] ParticleSystem leftThrusterParticles;
-   [SerializeField] ParticleSystem rightThrusterParticles;
+   // [SerializeField] ParticleSystem leftThrusterParticles;
+   // [SerializeField] ParticleSystem rightThrusterParticles;
    float minMainThrust = 0;
    float maxMainThrust = 1500;
    float acceleration = 1000;
    AudioSource audioSource;
    Rigidbody rb;
+   public Animator animator;
+   float distToGround;
+
+
+
 
    void Start()
    {
-      rb = GetComponent<Rigidbody>();
+      distToGround = GetComponentInChildren<BoxCollider>().bounds.extents.y;
+      rb = GetComponentInChildren<Rigidbody>();
       audioSource = GetComponent<AudioSource>();
+      animator = gameObject.GetComponentInChildren<Animator>();
    }
 
 
@@ -28,12 +35,27 @@ public class Movement : MonoBehaviour
    {
       ProcessThrust();
       ProcessRotation();
+      if (IsGrounded()) animator.SetBool("isGround", true);
+      else animator.SetBool("isGround", false);
+   }
+
+   bool IsGrounded()
+   {
+      return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
    }
 
    void ProcessThrust()
    {
-      if (Input.GetKey(KeyCode.Space)) StartThrusting();
-      else StopThrusting();
+      if (Input.GetKey(KeyCode.Space))
+      {
+         animator.SetBool("isJumping", true);
+         StartThrusting();
+      }
+      else
+      {
+         animator.SetBool("isJumping", false);
+         StopThrusting();
+      }
 
    }
 
@@ -41,7 +63,7 @@ public class Movement : MonoBehaviour
    {
       if (Input.GetKey(KeyCode.A)) RotateLeft();
       else if (Input.GetKey(KeyCode.D)) RotateRight();
-      else StopRotating();
+      // else StopRotating();
    }
 
    void StartThrusting()
@@ -65,13 +87,13 @@ public class Movement : MonoBehaviour
 
    void RotateLeft()
    {
-      if (!rightThrusterParticles.isPlaying) rightThrusterParticles.Play();
+      // if (!rightThrusterParticles.isPlaying) rightThrusterParticles.Play();
       ApplyRotation(rotationThurst);
    }
 
    void RotateRight()
    {
-      if (!leftThrusterParticles.isPlaying) leftThrusterParticles.Play();
+      // if (!leftThrusterParticles.isPlaying) leftThrusterParticles.Play();
       ApplyRotation(-rotationThurst);
    }
 
@@ -82,9 +104,9 @@ public class Movement : MonoBehaviour
       rb.freezeRotation = false; // unfreezing rotation so the physics system can take over
    }
 
-   void StopRotating()
-   {
-      rightThrusterParticles.Stop();
-      leftThrusterParticles.Stop();
-   }
+   // void StopRotating()
+   // {
+   //    rightThrusterParticles.Stop();
+   //    leftThrusterParticles.Stop();
+   // }
 }
