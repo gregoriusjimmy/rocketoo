@@ -33,10 +33,15 @@ public class Movement : MonoBehaviour
 
    void Update()
    {
-      ProcessThrust();
-      ProcessRotation();
+
       if (IsGrounded()) animator.SetBool("isGround", true);
       else animator.SetBool("isGround", false);
+   }
+
+   void FixedUpdate()
+   {
+      ProcessThrust();
+      ProcessRotation();
    }
 
    bool IsGrounded()
@@ -100,6 +105,8 @@ public class Movement : MonoBehaviour
    void ApplyRotation(float rotationThisFrame)
    {
       rb.freezeRotation = true; // freezing rotation so we can manually rotate;
+                                // transform.rotation = Quaternion.Euler(rotationThisFrame * Time.deltaTime, 0, 0);
+
       transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
       rb.freezeRotation = false; // unfreezing rotation so the physics system can take over
    }

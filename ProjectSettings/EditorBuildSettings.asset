@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Rock4.unity
     guid: 002eec2d940252849a58b6ec2bdba128
+  - enabled: 1
+    path: Assets/Scenes/Orange1.unity
+    guid: 39778b1e334158e4db79786a0fa18127
+  - enabled: 1
+    path: Assets/Scenes/Orange2.unity
+    guid: 8bd694cef7080244086f84a7e70ca326
   - enabled: 0
     path: Assets/Scenes/LevelDev 2.unity
     guid: 20cfad9595ca2c749b726a2078114e2d

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 813762943789409619}
   - component: {fileID: 813762943789409618}
-  - component: {fileID: 5473794584630726710}
   m_Layer: 0
   m_Name: FrontLight
   m_TagString: Untagged
@@ -25,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813762943789409617}
-  m_LocalRotation: {x: 0.37622738, y: -0.059357047, z: 0.05373426, w: 0.9230614}
+  m_LocalRotation: {x: 0.37623113, y: -0.05935841, z: 0.053732034, w: 0.92305994}
   m_LocalPosition: {x: 21.6, y: 10.39, z: -19.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -44,7 +43,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.42
+  m_Intensity: 0.7
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -94,17 +93,3 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &5473794584630726710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813762943789409617}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe592a0fafb0ab54f8e0ee8b7dae28c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialExposure: 1.2
-  initialRotation: 0

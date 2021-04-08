@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &619403011027766360
+--- !u!1 &9015239913107927687
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,44 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 619403011027766358}
-  - component: {fileID: 619403011027766359}
+  - component: {fileID: 9015239913107927681}
+  - component: {fileID: 9015239913107927686}
   m_Layer: 0
-  m_Name: Point Light
+  m_Name: PointLightBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &619403011027766358
+--- !u!4 &9015239913107927681
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619403011027766360}
-  m_LocalRotation: {x: -0.32292005, y: 0.50513875, z: -0.52015525, w: 0.608273}
-  m_LocalPosition: {x: 3.1, y: 18.51, z: -2.88}
+  m_GameObject: {fileID: 9015239913107927687}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.78, y: 23.01, z: 9.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 7.623, y: 73.524, z: -75.371}
---- !u!108 &619403011027766359
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &9015239913107927686
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619403011027766360}
+  m_GameObject: {fileID: 9015239913107927687}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.383277, g: 0.47205392, b: 0.9339623, a: 1}
-  m_Intensity: 10.03
-  m_Range: 5.59
-  m_SpotAngle: 141
+  m_Color: {r: 0.9528302, g: 0.4287024, b: 0.29214135, a: 1}
+  m_Intensity: 3.53
+  m_Range: 39.41
+  m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
