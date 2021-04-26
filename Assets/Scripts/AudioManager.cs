@@ -1,8 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using System;
+
+
 
 public class AudioManager : MonoBehaviour
 {
@@ -14,10 +17,12 @@ public class AudioManager : MonoBehaviour
       if (instance == null) instance = this;
       else
       {
-         Destroy(gameObject);
+
+         Destroy(this.gameObject);
          return;
       }
-      DontDestroyOnLoad(gameObject);
+
+      DontDestroyOnLoad(this.gameObject);
       foreach (Sound s in sounds)
       {
          s.source = gameObject.AddComponent<AudioSource>();
@@ -31,7 +36,7 @@ public class AudioManager : MonoBehaviour
 
    void Start()
    {
-      Play("SoundTrack");
+      Play("SoundTrackRock");
    }
 
    public void Play(string name)
@@ -44,6 +49,27 @@ public class AudioManager : MonoBehaviour
       }
       s.source.Play();
    }
+   public void StopPlaying(string sound)
+   {
+      Sound s = Array.Find(sounds, item => item.name == sound);
+      if (s == null)
+      {
+         Debug.LogWarning("Sound: " + name + " not found!");
+         return;
+      }
 
+
+      s.source.Stop();
+   }
+   public bool IsPlaying(string sound)
+   {
+      Sound s = Array.Find(sounds, item => item.name == sound);
+      if (s == null)
+      {
+         Debug.LogWarning("Sound: " + name + " not found!");
+         return false;
+      }
+      return s.source.isPlaying;
+   }
 
 }

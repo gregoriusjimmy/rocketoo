@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3740602475867456514}
   - component: {fileID: 613554448386094776}
   - component: {fileID: 2224758773594437639}
+  - component: {fileID: 8150969090804655913}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -97,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe136e42d8482c0459176708f5ae1bef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainThurst: 100
+  mainThurst: 400
   mainEngine: {fileID: 8300000, guid: 3f902c0eabeda534cada33595b995870, type: 3}
   rotationThurst: 100
   mainEngineParticles: {fileID: 2528870058281106984}
@@ -198,6 +199,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8150969090804655913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1984965216891954268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b923833444b384fb48152e3675f772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2425067893559645012
 PrefabInstance:
   m_ObjectHideFlags: 0

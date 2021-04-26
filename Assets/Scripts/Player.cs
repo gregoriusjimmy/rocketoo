@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
    void Update()
    {
-      if (Input.GetKey(KeyCode.D))
+      if (Input.GetAxis("Horizontal") < 0)
       {
          animator.SetBool("isRunning", true);
       }
